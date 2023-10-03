@@ -17,9 +17,23 @@ const routes = createBrowserRouter([
                 element:  <Explore/>
             },
             {
-                path: "notification",
+                path: "notifications",
                 element:<Notification/>
+            },
+            {
+                path: "messages",
+                element: <Notification/>,
+            },
+            {
+                path: "i/verified-choose",
+                element: <Notification/>,
+            },
+            {
+                path: "user",
+                element: <Notification/>,
             }
+         
+
         ]
     },
 ])
