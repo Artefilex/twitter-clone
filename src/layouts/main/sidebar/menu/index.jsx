@@ -27,13 +27,14 @@ export default function Menu() {
                 {isActive && items.icon.active}
                 {!isActive && items.icon.pasive}
               </div>
-              <div className="pr-4 text-xl">{items.title} </div>
+              <div className="pr-4 text-xl leading-5">{items.title} </div>
             </div>
           )}
         </NavLink>
       ))}
     <More/>
     <NewTweet/>
+    
     </nav>
   );
 }
