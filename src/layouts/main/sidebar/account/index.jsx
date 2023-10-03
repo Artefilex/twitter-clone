@@ -6,7 +6,7 @@ export default function Account (){
     return (
         <div className="mt-auto ">
         <Popover className={"relative"}>
-      <Popover.Button className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex items-center text-left outline-none">
+      <Popover.Button className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex items-center text-left outline-none transition-colors">
         <img src={acount.avatar} alt="dddd" className="w-10 h-10  rounded-full " />
         <div className="mx-3 text-[15px] ">
         <span className="text-bold leading-[20px] "> {acount.fullName}</span>
