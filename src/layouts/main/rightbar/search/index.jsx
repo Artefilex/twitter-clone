@@ -11,7 +11,7 @@ export default function Search() {
   return (
     <div
     ref={ref} 
-    className="min-h-[32px] h-[53px] mb-3 rounded-full bg-[#202327] flex items-center relative">
+    className="min-h-[32px] h-[53px] mb-3 z-10 flex items-center sticky top-0 bg-black mt-0.5">
       <label className="h-[43px] rounded-full bg-[#202327] w-full   relative group border border-transparent outline-none focus-within:bg-black focus-within:border-[#1d9bf0]">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none  ">
           <svg

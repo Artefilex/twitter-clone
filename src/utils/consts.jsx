@@ -224,5 +224,69 @@ export const topics = [
       value: "Starlink"
     },
     postCount: 15565
+  },
+  {
+    title: 'Türkiye tarihinde gündemde',
+    topic: {
+      type: "tag",
+      value: "dilanpolat"
+    },
+    postCount: 1555
+  },
+  {
+    title: 'Türkiye tarihinde gündemde',
+    topic: {
+      type: "query",
+      value: "Starlink"
+    },
+    postCount: 15565
+  },
+  {
+    title: 'Türkiye tarihinde gündemde',
+    topic: {
+      type: "tag",
+      value: "dilanpolat"
+    },
+    postCount: 1555
+  },
+  {
+    title: 'Türkiye tarihinde gündemde',
+    topic: {
+      type: "query",
+      value: "Starlink"
+    },
+    postCount: 15565
+  },
+  {
+    title: 'Türkiye tarihinde gündemde',
+    topic: {
+      type: "tag",
+      value: "dilanpolat"
+    },
+    postCount: 1555
+  },
+  {
+    title: 'Türkiye tarihinde gündemde',
+    topic: {
+      type: "query",
+      value: "Starlink"
+    },
+    postCount: 15565
+  },
+  {
+    title: 'Türkiye tarihinde gündemde',
+    topic: {
+      type: "tag",
+      value: "dilanpolat"
+    },
+    postCount: 1555
+  },
+  {
+    title: 'Türkiye tarihinde gündemde',
+    topic: {
+      type: "query",
+      value: "Starlink"
+    },
+    postCount: 15565
   }
 ]
