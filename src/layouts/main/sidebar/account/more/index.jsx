@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import { useAccount, useAccounts } from "../../../../../store/hooks";
-import { setCurrentAcount } from "../../../../../store/actions";
+import { useAccount, useAccounts } from "../../../../../store/auth/hooks";
+import { setCurrentAcount } from "../../../../../store/auth/actions";
 
 export default function More({close}) {
   const currentAccount = useAccount();
@@ -21,7 +21,7 @@ export default function More({close}) {
           <img src={account.avatar} alt="dddd" className="w-10 h-10  rounded-full " />
           <div className="mx-3 text-[15px] flex flex-col flex-1">
             <span className="text-bold leading-[20px] ">  {account.fullName} </span>
-            <span className="text-[#71767b] "> @{account.username} </span>
+            <span className="text-[color:var(--color-subbase)] "> @{account.username} </span>
           </div>
           {
             currentAccount.id === account.id && (

@@ -2,7 +2,7 @@
 import SidebarSection from "../../../../componet/sidebar-section";
 import UserCard from "../../../../componet/user-card";
 import { whoFollowUsers } from "../../../../mock";
-import {useAccount} from "../../../../store/hooks"
+import {useAccount} from "../../../../store/auth/hooks"
 export default function WhoFollow () {
     const account = useAccount()
   return(

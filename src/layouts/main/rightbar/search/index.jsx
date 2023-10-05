@@ -11,14 +11,14 @@ export default function Search() {
   return (
     <div
     ref={ref} 
-    className="min-h-[32px] h-[53px] mb-3 z-10 flex items-center sticky top-0 bg-black mt-0.5">
-      <label className="h-[43px] rounded-full bg-[#202327] w-full   relative group border border-transparent outline-none focus-within:bg-black focus-within:border-[#1d9bf0]">
+    className="min-h-[32px] h-[53px] mb-3 z-10 flex items-center sticky top-0 bg-[color:var(--background-primary)] mt-0.5">
+      <label className="h-[43px] rounded-full bg-[color:var(--background-third)] w-full   relative group border border-transparent outline-none focus-within:bg-[color:var(--background-primary)] focus-within:border-[#1d9bf0]">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none  ">
           <svg
             viewBox="0 0 24 24"
             width={18.75}
             height={18.75}
-            className="min-w-[32px] text-[#71767b]"
+            className="min-w-[32px] text-[color:var(--color-subbase)] group-focus-within:text-[color:var(--background-primary)]"
           >
             <path
               fill="currentColor"
@@ -32,14 +32,14 @@ export default function Search() {
           value={query}
           onChange={e => setQuery(e.target.value)}
           onFocus={()=>setFocus(true)}
-          
-          className="w-full h-full bg-transparent placeholder-[#71767b] rounded-full outline-none pl-[56px]  text-[15px]"
+         
+          className="w-full h-full bg-transparent  rounded-full outline-none pl-[56px]  text-[15px] "
         />
         {(query && focus) && (
         <button
         type="button"
         onClick={()=>setQuery("")}
-        className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3 "> 
+        className="w-[22px] h-[22px] rounded-full bg-[color:var(--background-primary)] flex items-center justify-center min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3 "> 
               <svg
             viewBox="0 0 15 15" width={10} height={10} 
           >
@@ -51,8 +51,8 @@ export default function Search() {
       </label>
       {focus && (
             <div 
-            className="absolute w-[350px] top-full -translate-y-1 -left-px bg-black shadow-box max-h-[calc(80vh - 53px)]  rounded-lg min-h-[100px]">
-                <p className="p-3 pt-5 text-center text-[#71767b] leading-5">Kişileri, listeleri veya anahtar kelimeleri aramayı dene</p>
+            className="absolute w-[350px] top-full -translate-y-1 -left-px bg-[color:var(--background-primary)] shadow-box max-h-[calc(80vh - 53px)]  rounded-lg min-h-[100px]">
+                <p className="p-3 pt-5 text-center text-[color:var(--color-subbase)] leading-5">Kişileri, listeleri veya anahtar kelimeleri aramayı dene</p>
             </div>
          )}
     </div>

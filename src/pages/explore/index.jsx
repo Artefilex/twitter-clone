@@ -1,5 +1,5 @@
 export default function Explore (){
     return(
-        <div className="bg-black justify-center align-center container">explore</div>
+        <div className="bg-[color:var(--background-primary)] justify-center align-center container">explore</div>
     )
 }

@@ -8,7 +8,7 @@ export const mainMenu = [
       active: (
         <svg
           viewBox="0 0 24 24"
-          fill="#fff"
+          fill="currentColor"
           width={26.25}
           height={26.25}
           className="block"
@@ -18,7 +18,7 @@ export const mainMenu = [
       ),
       pasive: (
         <svg
-          fill="#e7e9ea"
+          fill="currentColor"
           viewBox="0 0 24 24"
           width={26.25}
           height={26.25}
@@ -36,7 +36,7 @@ export const mainMenu = [
       active: (
         <svg
           viewBox="0 0 24 24"
-          fill="#fff"
+          fill="currentColor"
           width={26.25}
           height={26.25}
           className="block"
@@ -46,7 +46,7 @@ export const mainMenu = [
       ),
       pasive: (
         <svg
-          fill="#e7e9ea"
+          fill="currentColor"
           viewBox="0 0 24 24"
           width={26.25}
           height={26.25}
@@ -65,7 +65,7 @@ export const mainMenu = [
       active: (
         <svg
           viewBox="0 0 24 24"
-          fill="#fff"
+          fill="currentColor"
           width={26.25}
           height={26.25}
           className="block"
@@ -75,7 +75,7 @@ export const mainMenu = [
       ),
       pasive: (
         <svg
-          fill="#e7e9ea"
+          fill="currentColor"
           viewBox="0 0 24 24"
           width={26.25}
           height={26.25}
@@ -94,7 +94,7 @@ export const mainMenu = [
       active: (
         <svg
           viewBox="0 0 24 24"
-          fill="#fff"
+          fill="currentColor"
           width={26.25}
           height={26.25}
           className="block"
@@ -105,7 +105,7 @@ export const mainMenu = [
       pasive: (
         <svg
           viewBox="0 0 24 24"
-          fill="#e7e9ea"
+          fill="currentColor"
           width={26.25}
           height={26.25}
           className="block"
@@ -123,7 +123,7 @@ export const mainMenu = [
       active: (
         <svg
           viewBox="0 0 24 24"
-          fill="#fff"
+          fill="currentColor"
           width={26.25}
           height={26.25}
           className="block"
@@ -133,7 +133,7 @@ export const mainMenu = [
       ),
       pasive: (
         <svg
-          fill="#e7e9ea"
+          fill="currentColor"
           viewBox="0 0 24 24"
           width={26.25}
           height={26.25}
@@ -152,7 +152,7 @@ export const mainMenu = [
       active: (
         <svg
           viewBox="0 0 24 24"
-          fill="#fff"
+          fill="currentColor"
           width={26.25}
           height={26.25}
           className="block"
@@ -162,7 +162,7 @@ export const mainMenu = [
       ),
       pasive: (
         <svg
-          fill="#e7e9ea"
+          fill="currentColor"
           viewBox="0 0 24 24"
           width={26.25}
           height={26.25}
@@ -174,8 +174,8 @@ export const mainMenu = [
     },
   },
   {
-    path: ()=>{
-       return  `/${store.getState()?.auth?.currentAccount.username}`
+    path: () => {
+      return `/${store.getState()?.auth?.currentAccount.username}`;
     },
     title: "Profile",
 
@@ -183,7 +183,7 @@ export const mainMenu = [
       active: (
         <svg
           viewBox="0 0 24 24"
-          fill="#fff"
+          fill="currentColor"
           width={26.25}
           height={26.25}
           className="block"
@@ -193,7 +193,7 @@ export const mainMenu = [
       ),
       pasive: (
         <svg
-          fill="#e7e9ea"
+          fill="currentColor"
           viewBox="0 0 24 24"
           width={26.25}
           height={26.25}
@@ -204,89 +204,87 @@ export const mainMenu = [
       ),
     },
   },
-
 ];
-
 
 export const topics = [
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "dilanpolat"
+      value: "dilanpolat",
     },
-    postCount: 1555
+    postCount: 1555,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Starlink"
+      value: "Starlink",
     },
-    postCount: 15565
+    postCount: 15565,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "dilanpolat"
+      value: "dilanpolat",
     },
-    postCount: 1555
+    postCount: 1555,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Starlink"
+      value: "Starlink",
     },
-    postCount: 15565
+    postCount: 15565,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "dilanpolat"
+      value: "dilanpolat",
     },
-    postCount: 1555
+    postCount: 1555,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Starlink"
+      value: "Starlink",
     },
-    postCount: 15565
+    postCount: 15565,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "dilanpolat"
+      value: "dilanpolat",
     },
-    postCount: 1555
+    postCount: 1555,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Starlink"
+      value: "Starlink",
     },
-    postCount: 15565
+    postCount: 15565,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "dilanpolat"
+      value: "dilanpolat",
     },
-    postCount: 1555
+    postCount: 1555,
   },
   {
-    title: 'Türkiye tarihinde gündemde',
+    title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Starlink"
+      value: "Starlink",
     },
-    postCount: 15565
-  }
-]
+    postCount: 15565,
+  },
+];

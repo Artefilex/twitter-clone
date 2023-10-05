@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { mainMenu } from "../../../../utils/consts";
 import NewTweet from "./new"
 import More from "./more";
-import { useAccount } from "../../../../store/hooks";
+import { useAccount } from "../../../../store/auth/hooks";
 export default function Menu() {
   const account = useAccount()
   return (
@@ -13,7 +13,7 @@ export default function Menu() {
           {({ isActive }) => (
             <div
               className={classNames(
-                " inline-flex  items-center p-3 transition-colors rounded-full gap-5  group-hover:bg-[#eff3f41a] ",
+                " inline-flex  items-center p-3  transition-colors rounded-full gap-5  group-hover:bg-[color:var(--background-third)] ",
                 {
                   "font-bold": isActive,
                 }
@@ -21,7 +21,7 @@ export default function Menu() {
             >
               <div className="w-[26.25px] h-[26.25px] relative ">
                 {items?.notification && (
-                  <span className="flex items-center justify-center w-[18px] h-[18px] rounded-full absolute -top-1.5 -right-1 bg-[#205bf3] text-[11px] ">
+                  <span className="flex items-center justify-center border border-[color:var(--background-primary)] text-[color:var(--background-primary)] bg-[color:var(--color-primary)] w-[18px] h-[18px] rounded-full absolute -top-1.5 -right-1  text-[11px] ">
                     {items?.notification}
                   </span>
                 )}

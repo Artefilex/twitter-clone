@@ -11,12 +11,12 @@ export default function UserCard({ user }) {
         className="w-10 h-10 rounded-full object-cover  "
       />
       <div className="flex-1 flex flex-col text-left">
-        <div className="text-[15px]  flex items-center  text-[#e7e9ea] leading-5 font-bold">
+        <div className="text-[15px]  flex items-center   leading-5 font-bold">
         {user.fullname}
           {user?.veriefied && (
             <svg
               viewBox="0 0 22 22"
-              className="text-[#1d9bf0] ml-0.5"
+              className="text-[color:var(--color-primary)] ml-0.5"
               width={18.75}
               height={18.75}
             >
@@ -27,7 +27,7 @@ export default function UserCard({ user }) {
             </svg>
           )}
         </div>
-        <div className="text-[15px]  text-[#71767b]  ">{user.username} </div>
+        <div className="text-[15px]  text-[color:var(--color-subbase)]  ">{user.username} </div>
       </div>
       <div>
         {following ? (
