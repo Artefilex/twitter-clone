@@ -18,7 +18,7 @@ export default function MainLayout() {
    document.documentElement.style.setProperty("--color-base" , appearance.color.base)
    document.documentElement.style.setProperty("--color-subbase", appearance.color.subbase)
  
-    document.documentElement.style.setProperty("--font-size" , appearance.fontSize)
+    document.documentElement.style.setProperty("--font-size" , appearance.fontSize +"px")
     document.documentElement.style.setProperty("--box-shadow" , appearance.boxShadow)
     console.log("appearance", appearance)
 

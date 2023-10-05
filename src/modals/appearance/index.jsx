@@ -6,18 +6,24 @@ import {
   setBackgroundColor,
   setColor,
   setBoxShadow,
+  setFontSize,
 } from "../../store/appearance/actions";
-import { mainColors } from "../../utils/consts";
+import { fontSizes, mainColors } from "../../utils/consts";
+import { useEffect } from "react";
+import { useState } from "react";
 export default function AppearanceModal({ close }) {
-  const { backgroundColor, color } = useAppearance();
-
+  const { backgroundColor, color , fontSize } = useAppearance();
+  const [fsPercent , setFsPercent] = useState(0)
+  useEffect(()=>{
+    setTimeout(()=> setFsPercent(document.querySelector(".active-font-size").offsetLeft +3 ) , 1)
+  },[fontSize])
   return (
     <div className="w-[600px] ">
-      <h3 className="mt-8 mb-3 text-[23px] leading-7 font-extrabold text-center">
+      <h3 className="mt-8 mb-3 text-[1.438rem] leading-7 font-extrabold text-center">
         Görünümünü özelleştir{" "}
       </h3>
       <div className="p-8 pt-0">
-        <p className="text-center text-[color:var(--color-subbase)] text-[15px] leading-5 mb-5">
+        <p className="text-center text-[color:var(--color-subbase)] text-[0.938rem] leading-5 mb-5">
           Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
         </p>
         <div className="mx-8 mb-4 ">
@@ -29,7 +35,7 @@ export default function AppearanceModal({ close }) {
             />
 
             <div className="flex-1 flex flex-col">
-              <header className="mb-0.5 text-[15px] font-bold leading-5 flex items-center ml-0.5">
+              <header className="mb-0.5 font-bold leading-5 flex items-center ml-0.5">
                 {" "}
                 X
                 <svg
@@ -43,11 +49,11 @@ export default function AppearanceModal({ close }) {
                     d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"
                   />
                 </svg>
-                <div className="ml-1 flex items-center leading-5 text-[15px] text-[color:var(--color-subbase)] ">
+                <div className="ml-1 flex items-center leading-5  text-[color:var(--color-subbase)] ">
                   @X . 31d
                 </div>
               </header>
-              <div className="leading-5 text-[15px] text-[color:var(--color-base)]">
+              <div className="leading-5 text-[color:var(--color-base)]">
                 X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar
                 yatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler,
                 etiketler ve{" "}
@@ -69,14 +75,36 @@ export default function AppearanceModal({ close }) {
                 Yazı tipi boyutu 
               </h6>
               <div className="bg-[color:var(--background-secondary)]  rounded-2xl p-4 flex items-center  gap-5 ">
-                <div className="text-[13px]">
+                <div className="text-[0.813rem]">
                   aA
                 </div>
-                <div className="h-1 bg-[color:var(--color-secondary)] flex-1  rounded-full">
-                
+                <div className="h-1 bg-[color:var(--color-secondary)] flex-1  rounded-full  relative">
+                <div style={{width: fsPercent}} className="absolute  h-full top-0 left-0 rounded-full bg-[color:var(--color-primary)]">
+                </div>
+                <div className="absolute -top-3.5 flex justify-between items-center -left-2 w-[calc(100%+16px)] ">
+                {
+                  fontSizes.map((fs, index) =>(
+                        <button 
+                        type="button"
+                        onClick={()=>{
+                          setFontSize(fs)
+                        }}
+                        className={classNames("before:absolute before:inset-0 before:rounded-full before:hover:bg-[color:var(--color-primary)] before:opacity-10  w-8 h-8 rounded-full flex items-center justify-center relative  ",{
+                          "active-font-size": fs === fontSize
+                        })} key={index}>
+                            <div className={classNames("w-3 h-3 rounded-full bg-[color:var(--color-secondary)]",{
+                              "w-4 h-4" : fs === fontSize,
+                              "!bg-[color:var(--color-primary)]":  fs <= fontSize 
+                            } )} >
+                             
+                            </div>
+                        </button>
+                  ))
+                 }
+                </div>
                  </div>
      
-                <div  className="text-[20px]">
+                <div  className="text-[1.25rem]">
                   Aa
                 </div>
               </div>
@@ -97,7 +125,7 @@ export default function AppearanceModal({ close }) {
                     }}
                     style={{ "--bg": c.primary }}
                     key={index}
-                    className="w-10 h-10 rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
+                    className="w-[40px] h-[40px] rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
                   >
                     {color.primary === c.primary && (
                       <svg viewBox="0 0 24 24" width={25} height={25}>
@@ -138,17 +166,17 @@ export default function AppearanceModal({ close }) {
                     });
                   }}
                   className={classNames(
-                    "h-16  pr-3 pl-2   bg-white text-[#0f1419] font-bold border border-white/10  rounded group flex items-center gap-1.5 ",
+                    "h-[62px] pr-3 pl-2   bg-white text-[#0f1419] font-bold border border-white/10  rounded group flex items-center gap-1.5 ",
                     {
                       " !border-[color:var(--color-primary)] !border-2":
                         backgroundColor.name === "light",
                     }
                   )}
                 >
-                  <div className="w-10 h-10 rounded-full group-hover:bg-black/5 flex-shrink-0 flex items-center justify-center ">
+                  <div className="w-[40px] h-[40px] rounded-full group-hover:bg-black/5 flex-shrink-0 flex items-center justify-center ">
                     <div
                       className={classNames(
-                        "w-5 h-5 rounded-full border-2 border-[#b9cad3]  flex items-center justify-center ",
+                        "w-[20px] h-[20px] rounded-full border-2 border-[#b9cad3]  flex items-center justify-center ",
                         {
                           " !border-[color:var(--color-primary)]  !bg-[color:var(--color-primary)]  text-white":
                             backgroundColor.name === "light",
@@ -165,7 +193,9 @@ export default function AppearanceModal({ close }) {
                       )}
                     </div>
                   </div>
-                  Varsayılan
+                  <div className="truncate flex-1">
+                  Varsayılan </div>
+                 
                 </button>
                 <button
                   onClick={() => {
@@ -187,17 +217,17 @@ export default function AppearanceModal({ close }) {
                     });
                   }}
                   className={classNames(
-                    "h-16  pr-3 pl-2  bg-[#15202b] text-[#f7f9f9] font-bold border  border-white/10   rounded group flex items-center gap-1.5 ",
+                    "h-[62px] pr-3 pl-2  bg-[#15202b] text-[#f7f9f9] font-bold border  border-white/10   rounded group flex items-center gap-1.5 ",
                     {
                       " !border-[color:var(--color-primary)] !border-2":
                         backgroundColor.name === "smooth",
                     }
                   )}
                 >
-                  <div className="w-10 h-10 rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center ">
+                  <div className="w-[40px] h-[40px] rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center ">
                     <div
                       className={classNames(
-                        "w-5 h-5 rounded-full border-2 border-[#3e4144]  flex items-center justify-center ",
+                        "w-[20px] h-[20px] rounded-full border-2 border-[#3e4144]  flex items-center justify-center ",
                         {
                           " !border-[color:var(--color-primary)]  !bg-[color:var(--color-primary)]  text-white":
                             backgroundColor.name === "smooth",
@@ -214,7 +244,8 @@ export default function AppearanceModal({ close }) {
                       )}
                     </div>
                   </div>
-                  Loş
+                  <div className="truncate flex-1 text-center pr-4">
+                  Loş </div>
                 </button>
                 <button
                   onClick={() => {
@@ -236,17 +267,17 @@ export default function AppearanceModal({ close }) {
                     });
                   }}
                   className={classNames(
-                    "h-16 pr-3 pl-2  bg-black text-[#f7f9f9]  font-bold border border-white/10  rounded group flex items-center gap-1.5 whitespace-nowrap ",
+                    "h-[62px] pr-3 pl-2  bg-black text-[#f7f9f9]  font-bold border border-white/10  rounded group flex items-center gap-1.5  ",
                     {
                       " !border-[color:var(--color-primary)] !border-2":
                         backgroundColor.name === "dark",
                     }
                   )}
                 >
-                  <div className="w-10 h-10 rounded-full group-hover:bg-white/10 flex-shrink-0 flex items-center justify-center ">
+                  <div className="w-[40px] h-[40px] rounded-full group-hover:bg-white/10 flex-shrink-0 flex items-center justify-center ">
                     <div
                       className={classNames(
-                        "w-5 h-5 rounded-full border-2 border-[#3e4144]  flex items-center justify-center ",
+                        "w-[20px] h-[20px] rounded-full border-2 border-[#3e4144]  flex items-center justify-center ",
                         {
                           " !border-[color:var(--color-primary)]  !bg-[color:var(--color-primary)]  text-white":
                             backgroundColor.name === "dark",
@@ -262,14 +293,16 @@ export default function AppearanceModal({ close }) {
                         </svg>
                       )}
                     </div>
-                  </div>{" "}
+                  </div>
+                  <div className="truncate">
                   Işıklar Kapalı
+                  </div>
                 </button>
               </div>
             </section>
           </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center pt-4">
           <Button onClick={close}>Bitti</Button>
         </div>
       </div>
