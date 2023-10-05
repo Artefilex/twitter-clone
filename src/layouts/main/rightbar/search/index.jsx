@@ -12,13 +12,13 @@ export default function Search() {
     <div
     ref={ref} 
     className="min-h-[32px] h-[53px] mb-3 z-10 flex items-center sticky top-0 bg-[color:var(--background-primary)] mt-0.5">
-      <label className="h-[43px] rounded-full bg-[color:var(--background-third)] w-full   relative group border border-transparent outline-none focus-within:bg-[color:var(--background-primary)] focus-within:border-[#1d9bf0]">
+      <label className="h-[43px] rounded-full bg-[color:var(--background-third)] w-full   relative group border border-transparent outline-none focus-within:bg-[color:var(--background-primary)]  focus-within:border-[color:var(--color-primary)]">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none  ">
           <svg
             viewBox="0 0 24 24"
             width={18.75}
             height={18.75}
-            className="min-w-[32px] text-[color:var(--color-subbase)] group-focus-within:text-[color:var(--background-primary)]"
+            className="min-w-[32px] text-[color:var(--color-subbase)] group-focus-within:text-[color:var(--color-primary)]"
           >
             <path
               fill="currentColor"

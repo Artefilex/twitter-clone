@@ -19,10 +19,10 @@ export default function Footer (){
             />
           </svg> </Popover.Button>
             <Popover.Panel className={"w-[150px] max-w-[384px] bg-[color:var(--background-secondary)] rounded-xl grid absolute bottom-0 right-0 shadow-box overflow-hidden "}> 
-            <Link to={"/"} className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"> Hakkında </Link>
-            <Link to={"/"} className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"> Durum  </Link>
-            <Link to={"/"} className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"> İşletmeler için X  </Link>
-            <Link to={"/"} className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"> Geliştiriciler </Link>
+            <Link to={"/"} className="py-3 px-4 text-[color:var(--color-base)]  text-[15px] leading-5 font-bold hover:bg-[color:var(--background-third)] transition-colors "> Hakkında </Link>
+            <Link to={"/"} className="py-3 px-4  text-[color:var(--color-base)] text-[15px] leading-5 font-bold hover:bg-[color:var(--background-third)] transition-colors"> Durum  </Link>
+            <Link to={"/"} className="py-3 px-4  text-[color:var(--color-base)] text-[15px] leading-5 font-bold hover:bg-[color:var(--background-third)] transition-colors"> İşletmeler için X  </Link>
+            <Link to={"/"} className="py-3 px-4  text-[color:var(--color-base)] text-[15px] leading-5 font-bold hover:bg-[color:var(--background-third)] transition-colors"> Geliştiriciler </Link>
             </Popover.Panel>
         </Popover>
 
