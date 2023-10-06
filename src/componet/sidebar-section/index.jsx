@@ -9,7 +9,7 @@ export default function SidebarSection({title ,children ,more }){
         </div>
 {
     more && (
-        <Link to={more} className="h-[52px] flex items-center px-4 text-[color:var(--color-primary)] rounded-2xl text-[15px] hover:bg-white/[0.03]"> Daha fazla göster</Link>
+        <Link to={more} className="h-[3.25rem] flex items-center px-4 text-[color:var(--color-primary)] rounded-2xl  hover:bg-white/[0.03]"> Daha fazla göster</Link>
     )
 }
         </section>

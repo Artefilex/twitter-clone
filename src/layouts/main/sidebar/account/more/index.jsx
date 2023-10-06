@@ -19,8 +19,8 @@ export default function More({close}) {
               "hover:bg-[#eff3f41a]": currentAccount.id !== account.id,
             } )} >
           <img src={account.avatar} alt="dddd" className="w-10 h-10  rounded-full " />
-          <div className="mx-3 text-[15px] flex flex-col flex-1">
-            <span className="text-bold leading-[20px] ">  {account.fullName} </span>
+          <div className="mx-3  flex flex-col flex-1">
+            <span className="text-bold leading-[1.25rem] ">  {account.fullName} </span>
             <span className="text-[color:var(--color-subbase)] "> @{account.username} </span>
           </div>
           {

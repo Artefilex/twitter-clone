@@ -11,9 +11,9 @@ export default function Search() {
   return (
     <div
     ref={ref} 
-    className="min-h-[32px] h-[53px] mb-3 z-10 flex items-center sticky top-0 bg-[color:var(--background-primary)] mt-0.5">
-      <label className="h-[43px] rounded-full bg-[color:var(--background-third)] w-full   relative group border border-transparent outline-none focus-within:bg-[color:var(--background-primary)]  focus-within:border-[color:var(--color-primary)]">
-        <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none  ">
+    className="min-h-[2rem] h-[3.313rem] mb-3 z-10 flex items-center sticky top-0 bg-[color:var(--background-primary)] mt-0.5">
+      <label className="h-[2.688rem] rounded-full bg-[color:var(--background-third)] w-full   relative group border border-transparent outline-none focus-within:bg-[color:var(--background-primary)]  focus-within:border-[color:var(--color-primary)]">
+        <div className="w-[3.5rem] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none  ">
           <svg
             viewBox="0 0 24 24"
             width={18.75}
@@ -33,7 +33,7 @@ export default function Search() {
           onChange={e => setQuery(e.target.value)}
           onFocus={()=>setFocus(true)}
          
-          className="w-full h-full bg-transparent  rounded-full outline-none pl-[56px]  text-[15px] "
+          className="w-full h-full bg-transparent  rounded-full outline-none pl-[3.5rem]"
         />
         {(query && focus) && (
         <button

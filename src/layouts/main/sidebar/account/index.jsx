@@ -8,8 +8,8 @@ export default function Account (){
         <Popover className={"relative"}>
       <Popover.Button className="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex items-center text-left outline-none transition-colors">
         <img src={acount.avatar} alt="dddd" className="w-10 h-10  rounded-full " />
-        <div className="mx-3 text-[15px] ">
-        <span className="text-bold leading-[20px] "> {acount.fullName}</span>
+        <div className="mx-3  ">
+        <span className="text-bold leading-[1.25rem] "> {acount.fullName}</span>
          <span className="text-[color:var(--color-subbase)] "> @{acount.username} </span>
         </div>
         <svg viewBox="0 0 24 24" className="ml-auto h-[1.172rem]">
